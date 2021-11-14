@@ -1,0 +1,26 @@
+function setup() {
+  createCanvas(500, 500);
+}
+let DIAMOND=50
+function draw() {
+  background(50);
+  for(var i=0;i<9;i++){
+    for(var j=0;j<9;j++) {
+     let topx = (i+1)*  DIAMOND
+     let topy = j* DIAMOND
+     let leftx = i* DIAMOND
+     let lefty = (j+1)* DIAMOND
+     let bottomx = (i+1)* DIAMOND
+     let bottomy = (j+2)* DIAMOND
+     let rightx = (i+2)* DIAMOND
+     let righty = (j+1)* DIAMOND
+     
+    let fillcolorred = random(0,255)
+      let fillcolorgreen = random(0,255)
+        let fillcolorblue = random(0,255)
+      
+        fill( fillcolorred,fillcolorgreen,fillcolorblue)
+quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty) 
+    }
+}
+}
