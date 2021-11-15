@@ -1,3 +1,5 @@
+# Thanks for sharing - this is such a great result for such simple code!
+
 function setup() {
   createCanvas(500, 500);
 }
