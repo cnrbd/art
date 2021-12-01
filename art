@@ -15,11 +15,13 @@ function setup() {
      let bottomy = (j+2)* DIAMOND
      let rightx = (i+2)* DIAMOND
      let righty = (j+1)* DIAMOND
-     
-
-     //makes similar colors and shades of a random base color
-fill(randomColor[0]+random(-40,40),randomColor[1]+random(-40,40),randomColor[2]+random(-40,40))
-     
+    
+ 
+     let randomChange = random(-30,30) //changes the shade for pattern2
+      //makes different shades of a random base color
+     // fill(randomColor[0]+randomChange,randomColor[1]+randomChange,randomColor[2]+randomChange)
+      
+      
       
 quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty) 
     }
