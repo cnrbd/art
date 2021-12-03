@@ -1,10 +1,9 @@
-let DIAMOND=50
-
 function setup() {
   createCanvas(500, 500);
+}
+let DIAMOND=50
+function draw() {
   background(50);
-  
-   let randomColor = [random(0,255), random(0,255), random(0,255)] //base color
   for(var i=0;i<9;i++){
     for(var j=0;j<9;j++) {
      let topx = (i+1)*  DIAMOND
@@ -15,15 +14,14 @@ function setup() {
      let bottomy = (j+2)* DIAMOND
      let rightx = (i+2)* DIAMOND
      let righty = (j+1)* DIAMOND
-    
- 
-     let randomChange = random(-30,30) //changes the shade for pattern2
-      //makes different shades of a random base color
-     // fill(randomColor[0]+randomChange,randomColor[1]+randomChange,randomColor[2]+randomChange)
-      
-      
-      
+
+    let fillcolorred = random(0,255)
+      let fillcolorgreen = random(0,255)
+        let fillcolorblue = random(0,255)
+
+        fill( fillcolorred,fillcolorgreen,fillcolorblue)
 quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty) 
     }
 }
 }
+
