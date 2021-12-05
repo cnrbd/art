@@ -36,10 +36,3 @@ quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty)
     }
 }
 }
-function mousePressed() {
-  noLoop();
-}
-
-function mouseReleased() {
-  loop();
-}
