@@ -1,11 +1,19 @@
-
+//Hi, I just added some color gradient in the background//
 
 function setup() {
   createCanvas(500, 500);
+  basecolor1 = color(140,0,0);
+  basecolor2 = color(0,0,140);
+  
+  for(let a=0; a<height; a++){
+    m = map(a,0,height,0,1);
+    let background = lerpColor(basecolor1, basecolor2,m)
+    stroke(background);
+    line(0,a,width,a);
+  }
 }
 let DIAMOND=50
 function draw() {
-  background(50);
   for(var i=0;i<9;i++){
     for(var j=0;j<9;j++) {
      let topx = (i+1)*  DIAMOND
@@ -28,5 +36,3 @@ quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty)
     }
 }
 }
-
-//Editing again, and adding this comment so that I can pull request again.
