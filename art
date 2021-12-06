@@ -1,9 +1,19 @@
 function setup() {
   createCanvas(500, 500);
+  basecolor1 = color(140,0,0);
+  basecolor2 = color(0,0,140);
+  
+// Choosing colors//  
+
+  for(let a=0; a<height; a++){
+    m = map(a,0,height,0,1);
+    let background = lerpColor(basecolor1, basecolor2,m)
+    stroke(background);
+    line(0,a,width,a);
+  }
 }
 let DIAMOND=50
 function draw() {
-  background(50);
   for(var i=0;i<9;i++){
     for(var j=0;j<9;j++) {
      let topx = (i+1)*  DIAMOND
@@ -14,7 +24,10 @@ function draw() {
      let bottomy = (j+2)* DIAMOND
      let rightx = (i+2)* DIAMOND
      let righty = (j+1)* DIAMOND
-    
+
+   // This portion of the code is to generate the pattern//   
+
+quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty) 
 
     let fillcolorred = random(100,255)
     let fillcolorgreen = random(0)
