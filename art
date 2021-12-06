@@ -1,5 +1,3 @@
-// Here we will be makind a gradient in the background//
-
 function setup() {
   createCanvas(500, 500);
   basecolor1 = color(140,0,0);
@@ -32,15 +30,21 @@ function draw() {
 quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty) 
 
     let fillcolorred = random(100,255)
-      let fillcolorgreen = random(0)
-        let fillcolorblue = random(100,190)
+    let fillcolorgreen = random(0)
+    let fillcolorblue = random(100,190)
       //I've made some changes with the color, so hope it works with you!
 
-        fill( fillcolorred,fillcolorgreen,fillcolorblue)
-
-   // Filling the pattern with random colors//  
- 
-
-    }
+    fill( fillcolorred,fillcolorgreen,fillcolorblue)
+    quad (topx,topy,leftx,lefty,bottomx,bottomy,rightx,righty) 
+  }
 }
+}
+
+//These two functions will make the program temporarily pauses when the mouse is pressed and continues running when the mouse is released
+function mousePressed() {
+  noLoop();
+}
+
+function mouseReleased() {
+  loop();
 }
